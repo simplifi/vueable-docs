@@ -1,7 +1,9 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <alert title='test' :showIcon='true' description='This is a test alert' :closeable='true'></alert>
+    <ul>
+      <li><a href='/alert'>Alert</a></li>
+    </ul>
   </div>
 </template>
 
