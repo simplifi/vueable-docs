@@ -4244,8 +4244,8 @@ vue@^2.4.2:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.4.3.tgz#55fee0ec509cf2e10aa73b34b15219e92a9ab9ea"
 
 vueable@>0.0.5:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/vueable/-/vueable-0.0.7.tgz#8d0c8cfd63f0ef44bf91b6ab1556be2861deafd7"
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/vueable/-/vueable-0.0.8.tgz#8c40affceafc376263de5e24a0144e5bd336fbd1"
 
 watchpack@^1.4.0:
   version "1.4.0"

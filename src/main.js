@@ -8,7 +8,7 @@ import Vueable from 'vueable'
 
 Vue.config.productionTip = false
 
-//Vue.use(Vueable, { /* options */ })
+Vue.use(Vueable, { /* options */ })
 
 /* eslint-disable no-new */
 new Vue({
