@@ -1,12 +1,15 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+// Uncomment to use your own custom styles
+// require('./sass/custom.scss')
+// OR
+// Use the default vueable component styles
+require(`vueable/dist/production/default.css`)
+
+
 import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vueable from 'vueable'
 
-
-Vue.config.productionTip = false
 
 Vue.use(Vueable, { /* options */ })
 
