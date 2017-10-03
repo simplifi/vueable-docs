@@ -1,9 +1,6 @@
 <template lang="pug">
   div
     h1 {{ msg }}
-    ul
-      li
-        a(href='/alert') Alert
 </template>
 
 <script>
@@ -11,7 +8,7 @@ export default {
   name: 'Home',
   data () {
     return {
-      msg: 'Vueable Component Library'
+      msg: 'Vueable Component Library - Getting Started'
     }
   }
 }

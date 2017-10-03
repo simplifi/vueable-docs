@@ -5,13 +5,19 @@
         h1.nav-list--title Basics
         ul.nav-list--items
           li
-            a.nav-list--item(href="#") Getting Started
+            router-link.nav-list--item(:to="{ name: 'index' }"
+                                       active-class="nav-list--item-is-selected"
+                                       exact=true)
+              | Getting Started
           li
             a.nav-list--item(href="#") Layout
         h1.nav-list--title Components
         ul.nav-list--items
           li
-            a.nav-list--item(href="/alert") Alerts
+            router-link.nav-list--item(:to="{ name: 'alert' }"
+                                       active-class="nav-list--item-is-selected"
+                                       exact=true)
+              | Alert
           li
             a.nav-list--item(href="#") Buttons
           li
