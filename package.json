@@ -1,7 +1,7 @@
 {
-  "name": "vue-components-app",
-  "version": "1.0.0",
-  "description": "A project that uses vue-simple-components",
+  "name": "vueable-docs",
+  "version": "0.0.1",
+  "description": "A project that uses vueable",
   "author": "@groksrc",
   "license": "MIT",
   "scripts": {
@@ -46,7 +46,7 @@
     "vue-loader": "^13.0.4",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.4.2",
-    "vueable": "^0.0.18",
+    "vueable": ">0.0.1",
     "webpack": "^3.5.6",
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
