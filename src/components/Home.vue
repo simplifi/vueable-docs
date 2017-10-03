@@ -1,10 +1,9 @@
-<template>
-  <div>
-    <h1>{{ msg }}</h1>
-    <ul>
-      <li><a href='/alert'>Alert</a></li>
-    </ul>
-  </div>
+<template lang="pug">
+  div
+    h1 {{ msg }}
+    ul
+      li
+        a(href='/alert') Alert
 </template>
 
 <script>
