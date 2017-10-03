@@ -17,7 +17,7 @@
             router-link.nav-list--item(:to="{ name: 'alert' }"
                                        active-class="nav-list--item-is-selected"
                                        exact=true)
-              | Alert
+              | Alerts
           li
             a.nav-list--item(href="#") Buttons
           li
