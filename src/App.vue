@@ -7,7 +7,7 @@
           li
             router-link.nav-list--item(:to="{ name: 'index' }"
                                        active-class="nav-list--item-is-selected"
-                                       exact=true)
+                                       :exact="true")
               | Getting Started
           li
             a.nav-list--item(href="#") Layout
@@ -16,7 +16,7 @@
           li
             router-link.nav-list--item(:to="{ name: 'alert' }"
                                        active-class="nav-list--item-is-selected"
-                                       exact=true)
+                                       :exact="true")
               | Alerts
           li
             a.nav-list--item(href="#") Buttons
