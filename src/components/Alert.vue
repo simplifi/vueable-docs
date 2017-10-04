@@ -9,7 +9,7 @@
       alert(title="Headline for Error Alert" type="error")
       alert(title="Headline for Info Alert" type="info")
     h2.heading-3 Code
-    .box.box-neutral
+    .box.box-neutral.box-code
       pre
         code
           | &lt;alert title="Headline for Default Alert"&gt;&lt;/alert&gt;
