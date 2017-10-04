@@ -14,7 +14,7 @@
       alert(title="Headline for Error Alert" type="error")
       alert(title="Headline for Info Alert" type="info")
     h2.heading-3 Code
-    .box.box-neutral
+    .box.box-neutral.box-code
       pre
         code.
           &lt;alert title="Headline for Default Alert"&gt;&lt;/alert&gt;
@@ -42,7 +42,7 @@
           li List item 1
           li List item 2
     h2.heading-3 Code
-    .box.box-neutral
+    .box.box-neutral.box-code
       pre
         code.
           &lt;alert title="Headline for Default Alert"
@@ -62,7 +62,7 @@
     .box.box-neutral.box-padded
       alert(title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec consectetur urna. Maecenas dignissim blandit molestie. In hac habitasse platea dictumst. Cras eget fermentum nulla." type="warning" :lightTitle="true")
     h2.heading-3 Code
-    .box.box-neutral
+    .box.box-neutral.box-code
       pre
         code.
           &lt;alert title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec consectetur urna. Maecenas dignissim blandit molestie. In hac habitasse platea dictumst. Cras eget fermentum nulla."
@@ -75,7 +75,7 @@
     .box.box-neutral.box-padded
       alert(title="Headline for Error Alert" type="error" :small="true")
     h2.heading-3 Code
-    .box.box-neutral
+    .box.box-neutral.box-code
       pre
         code.
           &lt;alert title="Headline for Error Alert" type="error" :small="true"&gt;&lt;/alert&gt;
@@ -88,7 +88,7 @@
       alert(title="Headline for Default Alert" :showIcon="false")
       alert(title="Headline for Info Alert" type="info" :closable="false")
     h2.heading-3 Code
-    .box.box-neutral
+    .box.box-neutral.box-code
       pre
         code.
           &lt;alert title="Headline for Default Alert" :showIcon="false"&gt;&lt;/alert&gt;
