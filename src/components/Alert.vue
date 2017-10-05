@@ -5,7 +5,7 @@
       Use alerts to provide users with a highly visible message. Specify the theme
       with the #[code type] property or omit it for the default theme. Available
       #[code type] values include: #[code success], #[code warning], #[code error]
-      and #[code info]. Use the required #[code title] property to set the alert's
+      and #[code info]. Use the required #[code title] property to set the alert
       title text.
     .box.box-neutral.box-padded
       alert(title="Headline for Default Alert")
@@ -30,10 +30,10 @@
     h1.heading-3 Extra Content
     p.
       To display a paragraph of text under the title, use the #[code description]
-      property. For additional HTML, nest the markup within the #[code alert]
-      component. Currently supported HTML includes the #[code UL] and #[code P]
-      elements. If both a #[code description] property is set and HTML is nested
-      within the alert, the nested HTML will override the #[code description] text.
+      property. For additional HTML, nest the markup within the alert component.
+      Currently supported HTML includes the #[code UL] and #[code P] elements.
+      If both a #[code description] property is set and HTML is nested within the
+      alert, the nested HTML will override the #[code description] text.
     .box.box-neutral.box-padded
       alert(title="Headline for Default Alert" description="Additional copy placed within a paragraph element below the title")
       alert(title="Headline for Success Alert" type="success")
@@ -56,9 +56,9 @@
             &lt;/ul&gt;
           &lt;/alert&gt;
 
-    h1.heading-3 Multiline Title
+    h1.heading-3 Multi-line Title
     p.
-      For multiline titles, set the #[code :lightTitle] property to #[code true].
+      For multi-line titles, set the #[code :lightTitle] property to #[code true].
     .box.box-neutral.box-padded
       alert(title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec consectetur urna. Maecenas dignissim blandit molestie. In hac habitasse platea dictumst. Cras eget fermentum nulla." type="warning" :lightTitle="true")
     h2.heading-3 Code
@@ -81,7 +81,8 @@
           &lt;alert title="Headline for Error Alert" type="error" :small="true"&gt;&lt;/alert&gt;
     h1.heading-3 Toggle Identifier and Close Icons
     p.
-      The identifier and close icons are displayed by default. To hide the identifier icon, set the #[code :showIcon] property to #[code false].
+      The identifier and close icons are displayed by default. To hide the
+      identifier icon, set the #[code :showIcon] property to #[code false].
       To hide the close icon, set the #[code :closable] property to
       #[code false].
     .box.box-neutral.box-padded
