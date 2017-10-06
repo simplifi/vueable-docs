@@ -1,13 +1,13 @@
-@import '~vueable/dist/production/sass/variables.scss';
+@import 'node_modules/vueable/dist/production/sass/variables.scss';
 
 // Put your own custom styles here.
 // $blue: #f00;
 
-@import '~vueable/dist/production/sass/vueable.scss';
+@import 'node_modules/vueable/dist/production/sass/vueable.scss';
 
-@import 'utilities/variables.scss';
-@import 'base/normalize.scss';
-@import 'base/base.sass';
-@import 'base/headings.sass';
-@import 'modules/box.sass';
-@import 'modules/nav/nav-list.sass';
+@import 'utilities/_variables.scss';
+@import 'base/_normalize.scss';
+@import 'base/_base.sass';
+@import 'base/_headings.sass';
+@import 'modules/_box.sass';
+@import 'modules/nav/_nav-list.sass';
