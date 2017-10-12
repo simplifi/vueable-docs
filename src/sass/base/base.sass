@@ -6,6 +6,10 @@
 html
   box-sizing: border-box
 
+html,
+body
+  min-width: 64em
+
 body
   padding-top: 2.25em
   color: $color-text
@@ -22,10 +26,14 @@ pre,
 code
   font-family: $font-monospace
 
+code
+  font-weight: bold
+
 pre
   margin: 0 0 1em
 
   code
     display: block
     overflow: auto
+    font-weight: normal
     line-height: 2
