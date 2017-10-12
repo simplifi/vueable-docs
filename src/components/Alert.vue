@@ -27,6 +27,83 @@
 
           &lt;alert title="Headline for Info Alert" type="info"&gt;&lt;/alert&gt;
 
+    h1.heading-2 Properties &amp; Events
+    h1.heading-3 Properties
+    table
+      th
+        td Property
+        td Required
+        td Description
+        td Default
+      tr
+        td title
+        td True
+        td.
+          #[code string]
+
+          For Alerts without a description or body this will be the primary content.
+        td #[code '']
+      tr
+        td description
+        td False
+        td.
+          #[code string]
+
+          Used to provide additional text content.
+        td #[code '']
+      tr
+        td type
+        td False
+        td
+          | #[code string]
+          | The following strings are recognized. Anything else provided will result in the default type being set.
+          ul
+            li success
+            li warning
+            li error
+            li info
+        td  #[code 'base']
+      tr
+        td closeable
+        td False
+        td When #[code true] the close button is displayed. Otherwise the close button is hidden.
+        td True
+      tr
+        td showIcon
+        td False
+        td When #[code true] the icon is displayed to the left of the title and description. Otherwise the icon is hidden.
+        td True
+      tr
+        td visible
+        td False
+        td When #[code true] the component is visible. Otherwise the component is hidden.
+        td True
+      tr
+        td small
+        td False
+        td When #[code true] the Alert is displayed in a compact style. Otherwise the normal styling will apply
+        td False
+      tr
+        td lightTitle
+        td False
+        td When #[code true] the title text will be displayed with a normal font weight. Otherwise a bold font will apply.
+        td False
+      tr
+        td customClass
+        td False
+        td Use to apply your custom css class to the component.
+        td #[code '']
+
+    h1.heading-3 Events
+    table
+      th
+        td Event Name
+        td Description
+      tr
+        td close
+        td Raised when the close button is clicked.
+
+    h1.heading-2 Sample Usage
     h1.heading-3 Extra Content
     p.
       To display a paragraph of text under the title, use the #[code description]
