@@ -29,70 +29,85 @@
 
     h1.heading-2 Properties &amp; Events
     h1.heading-3 Properties
-    table
-      th
-        td Property
-        td Required
-        td Description
-        td Default
-      tr
-        td title
-        td True
-        td.
-          #[code string]
-
-          For Alerts without a description or body this will be the primary content.
-        td #[code '']
-      tr
-        td description
-        td False
-        td.
-          #[code string]
-
-          Used to provide additional text content.
-        td #[code '']
-      tr
-        td type
-        td False
-        td
-          | #[code string]
-          | The following strings are recognized. Anything else provided will result in the default type being set.
-          ul
-            li success
-            li warning
-            li error
-            li info
-        td  #[code 'base']
-      tr
-        td closeable
-        td False
-        td When #[code true] the close button is displayed. Otherwise the close button is hidden.
-        td True
-      tr
-        td showIcon
-        td False
-        td When #[code true] the icon is displayed to the left of the title and description. Otherwise the icon is hidden.
-        td True
-      tr
-        td visible
-        td False
-        td When #[code true] the component is visible. Otherwise the component is hidden.
-        td True
-      tr
-        td small
-        td False
-        td When #[code true] the Alert is displayed in a compact style. Otherwise the normal styling will apply
-        td False
-      tr
-        td lightTitle
-        td False
-        td When #[code true] the title text will be displayed with a normal font weight. Otherwise a bold font will apply.
-        td False
-      tr
-        td customClass
-        td False
-        td Use to apply your custom css class to the component.
-        td #[code '']
+    table.table
+      thead
+        tr
+          th.tbl-width-25 Property
+          th.tbl-width-75 Description
+      tbody
+        tr
+          td
+            .table--separator title
+            strong.pill Required
+          td
+            p
+              code string
+            p For Alerts without a description or body. This will be the primary content.
+        tr
+          td description
+          td
+            p
+              code string
+            p Used to provide additional textual content.
+        tr
+          td type
+          td
+            p
+              code string
+            p The following strings are recognized. Any other value provided will result in the default type being set.
+            ul
+              li
+                code.
+                  base #[em.u-textlight (default)]
+              li
+                code success
+              li
+                code warning
+              li
+                code error
+              li
+                code info
+        tr
+          td closable
+          td
+            p
+              code.
+                boolean #[span.u-textlight = #[em true]]
+            p When #[code #[em true]], the close button is displayed. Otherwise the close button is hidden.
+        tr
+          td showIcon
+          td
+            p
+              code.
+                boolean #[span.u-textlight = #[em true]]
+            p When #[code #[em true]], the icon is displayed to the left of the title and description. Otherwise the icon is hidden.
+        tr
+          td visible
+          td
+            p
+              code.
+                boolean #[span.u-textlight = #[em true]]
+            p When #[code #[em true]], the component is visible. Otherwise the component is hidden.
+        tr
+          td small
+          td
+            p
+              code.
+                boolean #[span.u-textlight = #[em true]]
+            p When #[code #[em true]], the Alert is displayed in a compact style. Otherwise the normal styling will apply.
+        tr
+          td lightTitle
+          td
+            p
+              code.
+                boolean #[span.u-textlight = #[em true]]
+            p When #[code #[em true]], the title text will be displayed with a normal font weight. Otherwise a bold font will apply.
+        tr
+          td customClass
+          td
+            p
+              code string
+            p Use to apply your custom css class to the component.
 
     h1.heading-3 Events
     table

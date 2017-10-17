@@ -1,0 +1,11 @@
+// Column widths
+$table-width: 0
+
+@while $table-width < 95
+  $table-width: $table-width + 5
+  .tbl-width-#{$table-width}
+    width: #{$table-width}#{"%"}
+
+// Shrink wrap for narrow content
+.tbl-width-1
+  width: 1%
