@@ -8,13 +8,14 @@ $gray-lightest: #f7f7f7;
 $sand: #f9f7e8;
 
 $color-text: $gray-darkest;
+$color-text-inverse: #fff;
 $color-heading: $gray-darkest;
 $color-neutral: $gray;
 $color-selected: $sand;
 $color-background-body: $gray-lightest;
 $color-background-light: #fff;
 
-$border-light: 1px solid #eaeaea;
+$border-light: 1px solid $gray-light;
 $border-radius-light: 2px;
 $border-radius: 5px;
 $border-radius-heavy: 10px;
