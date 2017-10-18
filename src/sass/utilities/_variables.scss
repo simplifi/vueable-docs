@@ -1,21 +1,27 @@
 $font-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-monospace: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
-$gray-darkest: #333;
+$black: #000;
 $gray: #acacac;
-$gray-light: #eaeaea;
+$gray-darkest: #333;
+$gray-darker: #555;
+$gray-dark: #777;
+$gray-light: #ccc;
+$gray-lighter: #eaeaea;
 $gray-lightest: #f7f7f7;
+$white: #fff;
 $sand: #f9f7e8;
 
 $color-text: $gray-darkest;
-$color-text-inverse: #fff;
+$color-text-inverse: $white;
 $color-heading: $gray-darkest;
-$color-neutral: $gray;
+$color-border: $gray-lighter;
+$color-background: $gray-lightest;
+$color-background-dark: $gray;
+$color-background-light: $white;
 $color-selected: $sand;
-$color-background-body: $gray-lightest;
-$color-background-light: #fff;
 
-$border-light: 1px solid $gray-light;
-$border-radius-light: 2px;
+$border: 1px solid $color-border;
 $border-radius: 5px;
 $border-radius-heavy: 10px;
+$border-radius-light: 2px;
