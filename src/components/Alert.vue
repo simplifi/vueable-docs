@@ -36,7 +36,7 @@
       alert, the nested HTML will override the #[code description] text.
     .box.box-neutral.box-padded
       alert(title="Headline for Default Alert" description="Additional copy placed within a paragraph element below the title")
-      alert(title="Headline for Success Alert" type="success" description="not displayed")
+      alert(title="Headline for Success Alert" type="success" description="Not Displayed")
         p Additional paragraph copy
         ul
           li List item 1
@@ -48,7 +48,7 @@
           &lt;alert title="Headline for Default Alert"
                  description="Additional copy placed within a paragraph element below the title"&gt;&lt;/alert&gt;
 
-          &lt;alert title="Headline for Success Alert" type="success" description="not displayed"&gt;
+          &lt;alert title="Headline for Success Alert" type="success" description="Not Displayed"&gt;
             &lt;p&gt;Additional paragraph copy&lt;/p&gt;
             &lt;ul&gt;
               &lt;li&gt;List item 1&lt;/li&gt;
@@ -105,7 +105,7 @@
       tbody
         tr
           td
-            .table--separator title
+            .table--spaced title
             strong.pill Required
           td
             p
