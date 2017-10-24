@@ -12,7 +12,7 @@
     .box.box-neutral.box-padded
       alert(title="This is a Default Alert")
       alert(title="Success" description="Your operation was greeted with success" type="success")
-      alert(title="Warning Condition Ahead. You cannot ignore it by closing the message" type="warning" closable='false')
+      alert(title="Warning Condition Ahead. You cannot ignore it by closing the message" type="warning" :closable='false')
       alert(title="Alert for a Bunch of Errors" type="error" :description='errorsArray')
       alert(title="This Info Alert is using a slot" type="info")
         p.
@@ -20,7 +20,7 @@
         ul(v-for='item in messages')
           li
             i {{ item }}
-    h2.heading-3 Code
+    h1.heading-3 Code
     .box.box-neutral.box-code
       pre
         code.
@@ -28,7 +28,7 @@
 
           &lt;alert type="success" description="Your operation was greeted with success" title="Success" &gt;&lt;/alert&gt;
 
-          &lt;alert type="warning" closable="false" title="Warning Condition Ahead. You cannot ignore it by closing the message"&gt;&lt;/alert&gt;
+          &lt;alert type="warning" :closable="false" title="Warning Condition Ahead. You cannot ignore it by closing the message"&gt;&lt;/alert&gt;
 
           &lt;alert type="error" :description='errorsArray' title="Alert for a Bunch of Errors" &gt;&lt;/alert&gt;
 
@@ -42,7 +42,7 @@
           &lt;/alert&gt;
 
     a(id='properties')
-    h2.heading-2 Properties
+    h1.heading-2 Properties
     table.table
       thead
         tr
@@ -119,7 +119,7 @@
             p Use to apply your custom css class to the component.
 
     a(id='events')
-    h2.heading-2 Events
+    h1.heading-2 Events
     table.table
       thead
         tr
@@ -131,76 +131,51 @@
           td Raised when the close button is clicked.
 
     a(id='examples')
-    h2.heading-2 Examples
-    h1.heading-3 Extra Content
+    h1.heading-2 Examples
+
+    a(id='showIcon-false')
+    h1.heading-3 showIcon='false'
     p.
-      To display a paragraph of text under the title, use the #[code description]
-      property. For additional HTML, nest the markup within the alert component.
-      Currently supported HTML includes the #[code UL] and #[code P] elements.
-      If both a #[code description] property is set and HTML is nested within the
-      alert, the nested HTML will override the #[code description] text.
+      The icon can be turned off by setting the #[code showIcon] property to false.
     .box.box-neutral.box-padded
-      alert(title="Headline for Default Alert" description="Additional copy placed within a paragraph element below the title")
-      alert(title="Headline for Success Alert" type="success" description="Not Displayed")
-        p Additional paragraph copy
-        ul
-          li List item 1
-          li List item 2
-    h2.heading-3 Code
+      alert(:showIcon='false' title="This Alert Has No Icon")
+    h3.heading-3 Code
     .box.box-neutral.box-code
       pre
         code.
-          &lt;alert title="Headline for Default Alert"
-                 description="Additional copy placed within a paragraph element below the title"&gt;&lt;/alert&gt;
+          &lt;alert :showIcon='false' title="This Alert Has No Icon"&gt;&lt;/alert&gt;
 
-          &lt;alert title="Headline for Success Alert" type="success" description="Not Displayed"&gt;
-            &lt;p&gt;Additional paragraph copy&lt;/p&gt;
-            &lt;ul&gt;
-              &lt;li&gt;List item 1&lt;/li&gt;
-              &lt;li&gt;List item 2&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/alert&gt;
-
-    h1.heading-3 Multi-line Title
-    p.
-      For multi-line titles, set the #[code lightTitle] property to #[code true].
-    .box.box-neutral.box-padded
-      alert(title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec consectetur urna. Maecenas dignissim blandit molestie. In hac habitasse platea dictumst. Cras eget fermentum nulla." type="warning" :lightTitle="true")
-    h2.heading-3 Code
-    .box.box-neutral.box-code
-      pre
-        code.
-          &lt;alert title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec consectetur urna. Maecenas dignissim blandit molestie. In hac habitasse platea dictumst. Cras eget fermentum nulla."
-                 type="warning" :lightTitle="true"&gt;&lt;/alert&gt;
-
+    a(id='small-sized')
     h1.heading-3 Small-Sized
     p.
       To render a smaller version of the alert for cramped spaces, set the
       #[code small] property to #[code true].
     .box.box-neutral.box-padded
       alert(title="Headline for Error Alert" type="error" :small="true")
-    h2.heading-3 Code
+    h1.heading-3 Code
     .box.box-neutral.box-code
       pre
         code.
           &lt;alert title="Headline for Error Alert" type="error" :small="true"&gt;&lt;/alert&gt;
-    h1.heading-3 Toggle Identifier and Close Icons
+
+    a(id='custom-css')
+    h1.heading-3 Custom CSS
     p.
-      The identifier and close icons are displayed by default. To hide the
-      identifier icon, set the #[code showIcon] property to #[code false].
-      To hide the close icon, set the #[code closable] property to
-      #[code false].
+      You can apply your own css styles using the #[code customClass] property.
     .box.box-neutral.box-padded
-      alert(title="Headline for Default Alert" :showIcon="false")
-      alert(title="Headline for Info Alert" type="info" :closable="false")
-    h2.heading-3 Code
+      alert(type='error' title="A Magenta Alert" customClass='magenta')
+    h1.heading-3 Code
     .box.box-neutral.box-code
       pre
         code.
-          &lt;alert title="Headline for Default Alert" :showIcon="false"&gt;&lt;/alert&gt;
-
-          &lt;alert title="Headline for Info Alert" type="info" :closable="false"&gt;&lt;/alert&gt;
-
+          &lt;alert type='error' title="A Magenta Alert" customClass='magenta'&gt;&lt;/alert&gt;
+    h1.heading-3 SASS
+    .box.box-neutral.box-code
+      pre
+        code.
+          .vu-alert.vu-alert-error.magenta
+            i.icon-exclamation-triangle
+              background-color: magenta
 
 </template>
 <script>
@@ -222,3 +197,8 @@ export default {
   }
 }
 </script>
+<style lang='sass'>
+.vu-alert.vu-alert-error.magenta
+  i.icon-exclamation-triangle
+    background-color: magenta
+</style>
