@@ -6,15 +6,14 @@
       of alert with the #[code type] property. When omitted, the default Alert type is rendered.
       Available #[code type] values include: #[code success], #[code warning], #[code error]
       and #[code info]. The optional #[code title] property sets a heading for your alert messages,
-      while the #[code description] sets the body content. If you pass an array instead of a string
-      as the #[code description] the component will render an unordered list of items.
-      You can override the default list rendering by passing slot content to the component.
+      while the #[code description] sets the body content. The alert is slotted so you can
+      pass your own rendering into the body of the component as shown below.
     .box.box-neutral.box-padded
       alert(title="This is a Default Alert")
-      alert(title="Success" description="Your operation was greeted with success" type="success")
-      alert(title="Warning Condition Ahead. You cannot ignore it by closing the message" type="warning" :closable='false')
-      alert(title="Alert for a Bunch of Errors" type="error" :description='errorsArray')
-      alert(title="This Info Alert is using a slot" type="info")
+      alert(type="success" title="Success" description="Your operation was greeted with success")
+      alert(type="warning" :closable='false' title="Warning Condition Ahead. You cannot ignore it because the closable property is false")
+      alert(type="error" title="Some Errors" description="Some errors errored")
+      alert(type="info" title="This Info Alert is using a slot")
         p.
           Put whatever you like in the slot:
         ul(v-for='item in messages')
@@ -26,11 +25,11 @@
         code.
           &lt;alert title="This is a Default Alert"&gt;&lt;/alert&gt;
 
-          &lt;alert type="success" description="Your operation was greeted with success" title="Success" &gt;&lt;/alert&gt;
+          &lt;alert type="success" title="Success" description="Your operation was greeted with success"&gt;&lt;/alert&gt;
 
-          &lt;alert type="warning" :closable="false" title="Warning Condition Ahead. You cannot ignore it by closing the message"&gt;&lt;/alert&gt;
+          &lt;alert type="warning" :closable="false" title="Warning Condition Ahead. You cannot ignore because closable is false"&gt;&lt;/alert&gt;
 
-          &lt;alert type="error" :description='errorsArray' title="Alert for a Bunch of Errors" &gt;&lt;/alert&gt;
+          &lt;alert type="error" title="Some Errors" description="Some errors errored"&gt;&lt;/alert&gt;
 
           &lt;alert type="info" title="This Info Alert is using a slot"&gt;
             &lt;p&gt;Put whatever you like in the slot:&lt;/p&gt;
@@ -61,10 +60,9 @@
           td description
           td
             p.
-              #[code string] or #[code array]
+              #[code string]
             p.
-              Used to provide body content for the Alert. An unordered list is rendered for arrays,
-              which can be styled by using a slot.
+              Used to provide body content for the Alert.
         tr
           td type
           td
@@ -182,11 +180,6 @@
 export default {
   data() {
     return {
-      errorsArray: [
-        'A little tiny error happened',
-        'Which caused a bad nasty error',
-        'That precipitated much weeping and gnashing of teeth'
-      ],
       messages: [
         'One little',
         'Two little',
