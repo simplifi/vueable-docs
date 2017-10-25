@@ -10,7 +10,7 @@
       and that wasn't as well represented as we had hoped.
     p.
       We've looked deeply at Element, Quasar, Blueprint (React) and others in order to get a decent idea about
-      what the community is looking for in a component library and what this library should be about. That said, we may
+      what the community is looking for in a component library and what this library should be about. That said, we
       are not terribly original in our thinking or comprehensive in our component list. But our hope is that if
       you need a basic set of components to do simple UIs with then we might be a fit for you.
 
@@ -23,8 +23,7 @@
       pre
         code.
           // main.js
-          import Vueable from 'vueable'
-          import * as components from 'vueable' // or individually as you wish
+          import Vueable, * as components from 'vueable' // or individually as you wish
           Vue.use(Vueable, { components })
     p.
       For more granular control, you can import components by name directly instead of installing it as a plugin, such as:
@@ -51,7 +50,7 @@
     p.
       Several of the libraries we looked at were themeable. We really liked that about them. That said, when we dug in
       to the code we found several edges and gotchas where there were problems. Inline styling, lack of thought around
-      the specifc markup, and scoped styling buried in single file components are all things that we found problematic.
+      the specific markup, and scoped styling buried in single file components are all things that we found problematic.
       Our aim with this library is to address that by beginning with the premise that components should essentially
       start "naked". What is a "Naked Component" you ask? Well...
     p.
@@ -71,7 +70,7 @@
       really think about what we're doing, but it also makes theming a lot easier.
     p.
       Components do assume certain classes will be made available by the stylesheet of your app in order to look right.
-      But "right" by our definition and "right" by yours are probably different. So what we do is allow you to interject
+      But "right" by our definition and "right" by yours are probably different. So what we do is allow you to inject
       your own SASS right into the stylesheet. You can change anything about the stylesheet you want from colors, to
       margin &amp; padding to fonts and beyond. We show you how to do this in the theming section of the guide. For
       those who want to just get started with the library's default styling all you need to do is include the default
@@ -103,8 +102,7 @@
           // main.js
           import 'vueable/dist/production/default.css' // or include me in the style tag of your App.vue
           import Vue from 'vue'
-          import Vueable from 'vueable'
-          import * as components from 'vueable'
+          import Vueable, * as components from 'vueable'
 
           Vue.use(Vueable, { components })
 
