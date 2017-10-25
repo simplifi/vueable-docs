@@ -3,16 +3,12 @@
     h1.heading-1 Vueable Component Library
     h1.heading-2 Introduction
     p.
-      Welcome! We're glad you've found us. This little library of components started at a time
-      when there were already a few choices for Vue.js component libraries, but none of them really felt
-      right to us. We wanted something lightweight, easy to get started with, and something that didn't require
-      changes to our existing apps. We also felt like composability should really be favored over configuration
-      and that wasn't as well represented as we had hoped.
+      Vueable is a lightweight component library designed to be composable, simple to configure, and easy to integrate
+      into existing apps.
     p.
-      We've looked deeply at Element, Quasar, Blueprint (React) and others in order to get a decent idea about
-      what the community is looking for in a component library and what this library should be about. That said, we
-      are not terribly original in our thinking or comprehensive in our component list. But our hope is that if
-      you need a basic set of components to do simple UIs with then we might be a fit for you.
+      It takes inspiration from Element, Quasar, and Blueprint (React). As a work in progress, it is not comprehensive
+      or even terribly original in its component list. But if you need a basic set of components for simple UIs, Vueable
+      may be a good fit.
 
     h1.heading-2 Guiding Principles
     h1.heading-3 Plug and Play
@@ -48,19 +44,13 @@
 
     h1.heading-3 Naked Components
     p.
-      Several of the libraries we looked at were themeable. We really liked that about them. That said, when we dug in
-      to the code we found several edges and gotchas where there were problems. Inline styling, lack of thought around
-      the specific markup, and scoped styling buried in single file components are all things that we found problematic.
-      Our aim with this library is to address that by beginning with the premise that components should essentially
-      start "naked". What is a "Naked Component" you ask? Well...
-    p.
-      We start with the premise that individual components are pure html and javascript. Inline styling is not allowed.
-      Nor will you find any #[code &lt;style&gt;] tags in the single file components. There #[i is] a very minimal css
-      normalize applied so that we can assume certain basic environmental conditions about the browser we're rendering
-      in, but aside from that we expect the components to render in a more or less plain vanilla way. From that starting
-      point we apply our own optional default stylesheet to the components, so that they look nice. You are welcome to
-      use this, to customize it, or to throw it out completely and use your own. (Just don't forget to do the same
-      normalize that we do with the default stylesheet.)
+      Vueable starts with the premise that individual components are pure html and javascript. Inline styling is not
+      allowed, nor will you find any #[code &lt;style&gt;] tags in the single file components. There #[i is] a very
+      minimal css normalize applied so that we can assume certain basic environmental conditions about the browser we're
+      rendering in, but aside from that we expect the components to render in a more or less plain vanilla way. From
+      that starting point Vueable applies an optional default stylesheet to the components, so that they look nice. You
+      are welcome to use this, to customize it, or to throw it out completely and use your own. (Just don't forget to do
+      the same normalize that we do with the default stylesheet.)
 
     h1.heading-3 Themeability
     p.
@@ -72,7 +62,7 @@
       Components do assume certain classes will be made available by the stylesheet of your app in order to look right.
       But "right" by our definition and "right" by yours are probably different. So what we do is allow you to inject
       your own SASS right into the stylesheet. You can change anything about the stylesheet you want from colors, to
-      margin &amp; padding to fonts and beyond. We show you how to do this in the theming section of the guide. For
+      margin &amp; padding, to fonts and beyond. We show you how to do this in the theming section of the guide. For
       those who want to just get started with the library's default styling all you need to do is include the default
       stylesheet in your App.vue:
     .box.box-neutral.box-code
