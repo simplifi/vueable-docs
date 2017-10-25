@@ -9,11 +9,11 @@
       while the #[code description] sets the body content. The alert is slotted so you can
       pass your own rendering into the body of the component as shown below.
     .box.box-neutral.box-padded
-      alert(title="This is a Default Alert")
-      alert(type="success" title="Success" description="Your operation was greeted with success")
-      alert(type="warning" :closable='false' title="Warning Condition Ahead. You cannot ignore it because the closable property is false")
-      alert(type="error" title="Some Errors" description="Some errors errored")
-      alert(type="info" title="This Info Alert is using a slot")
+      vu-alert(title="This is a Default Alert")
+      vu-alert(type="success" title="Success" description="Your operation was greeted with success")
+      vu-alert(type="warning" :closable='false' title="Warning Condition Ahead. You cannot ignore it because the closable property is false")
+      vu-alert(type="error" title="Some Errors" description="Some errors errored")
+      vu-alert(type="info" title="This Info Alert is using a slot")
         p.
           Put whatever you like in the slot:
         ul(v-for='item in messages')
@@ -23,22 +23,22 @@
     .box.box-neutral.box-code
       pre
         code.
-          &lt;alert title="This is a Default Alert"&gt;&lt;/alert&gt;
+          &lt;vu-alert title="This is a Default Alert"&gt;&lt;/vu-alert&gt;
 
-          &lt;alert type="success" title="Success" description="Your operation was greeted with success"&gt;&lt;/alert&gt;
+          &lt;vu-alert type="success" title="Success" description="Your operation was greeted with success"&gt;&lt;/vu-alert&gt;
 
-          &lt;alert type="warning" :closable="false" title="Warning Condition Ahead. You cannot ignore because closable is false"&gt;&lt;/alert&gt;
+          &lt;vu-alert type="warning" :closable="false" title="Warning Condition Ahead. You cannot ignore because closable is false"&gt;&lt;/vu-alert&gt;
 
-          &lt;alert type="error" title="Some Errors" description="Some errors errored"&gt;&lt;/alert&gt;
+          &lt;vu-alert type="error" title="Some Errors" description="Some errors errored"&gt;&lt;/vu-alert&gt;
 
-          &lt;alert type="info" title="This Info Alert is using a slot"&gt;
+          &lt;vu-alert type="info" title="This Info Alert is using a slot"&gt;
             &lt;p&gt;Put whatever you like in the slot:&lt;/p&gt;
             &lt;ul v-for='item in messages'&gt;
               &lt;li&gt;
                 &lt;i&gt;{{item}}&lt;/i&gt;
               &lt;/li&gt;
             &lt;/ul&gt;
-          &lt;/alert&gt;
+          &lt;/vu-alert&gt;
 
     a(id='properties')
     h1.heading-2 Properties
@@ -72,7 +72,7 @@
             ul
               li
                 code.
-                  default #[em.u-textlight (default)]
+                  base #[em.u-textlight (default)]
               li
                 code success
               li
@@ -136,12 +136,12 @@
     p.
       The icon can be turned off by setting the #[code showIcon] property to false.
     .box.box-neutral.box-padded
-      alert(:showIcon='false' title="This Alert Has No Icon")
+      vu-alert(:showIcon='false' title="This Alert Has No Icon")
     h3.heading-3 Code
     .box.box-neutral.box-code
       pre
         code.
-          &lt;alert :showIcon='false' title="This Alert Has No Icon"&gt;&lt;/alert&gt;
+          &lt;vu-alert :showIcon='false' title="This Alert Has No Icon"&gt;&lt;/vu-alert&gt;
 
     a(id='small-sized')
     h1.heading-3 Small-Sized
@@ -149,24 +149,24 @@
       To render a smaller version of the alert for cramped spaces, set the
       #[code small] property to #[code true].
     .box.box-neutral.box-padded
-      alert(title="Headline for Error Alert" type="error" :small="true")
+      vu-alert(title="Headline for Error Alert" type="error" :small="true")
     h1.heading-3 Code
     .box.box-neutral.box-code
       pre
         code.
-          &lt;alert title="Headline for Error Alert" type="error" :small="true"&gt;&lt;/alert&gt;
+          &lt;vu-alert title="Headline for Error Alert" type="error" :small="true"&gt;&lt;/vu-alert&gt;
 
     a(id='custom-css')
     h1.heading-3 Custom CSS
     p.
       You can apply your own css styles using the #[code customClass] property.
     .box.box-neutral.box-padded
-      alert(type='error' title="A Magenta Alert" customClass='magenta')
+      vu-alert(type='error' title="A Magenta Alert" customClass='magenta')
     h1.heading-3 Code
     .box.box-neutral.box-code
       pre
         code.
-          &lt;alert type='error' title="A Magenta Alert" customClass='magenta'&gt;&lt;/alert&gt;
+          &lt;vu-alert type='error' title="A Magenta Alert" customClass='magenta'&gt;&lt;/vu-alert&gt;
     h1.heading-3 SASS
     .box.box-neutral.box-code
       pre
