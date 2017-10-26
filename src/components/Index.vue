@@ -12,7 +12,10 @@
                                            exact)
                   | Getting Started
               li
-                a.nav-list--item(href="#") Layout
+                router-link.nav-list--item(:to="{ name: 'layout' }"
+                                           active-class="nav-list--item-is-selected"
+                                           exact)
+                  | Layout
             h1.nav-list--title Components
             ul.nav-list--items
               li
