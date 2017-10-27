@@ -1,0 +1,21 @@
+// Provide additional styling for grid row+column examples
+.gridview
+  margin-bottom: 1em
+  background-color: $color-visual-row
+
+  &:last-child
+    margin-bottom: 0
+
+  > div
+    background:
+      color: $color-visual-column
+      clip: content-box
+
+  .gridview
+    background-color: transparent
+
+    > div
+      background-color: $color-visual-column-nested
+
+.gridview-sm
+  font-size: 0.75em

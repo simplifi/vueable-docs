@@ -12,6 +12,10 @@ $gray-lightest: #f7f7f7;
 $white: #fff;
 $sand: #f9f7e8;
 
+$blue-light: #add8e6;
+$green-light: #90ee90;
+$salmon-light: #ffa07a;
+
 $color-text: $gray-darkest;
 $color-text-inverse: $white;
 $color-heading: $gray-darkest;
@@ -20,6 +24,9 @@ $color-background: $gray-lightest;
 $color-background-dark: $gray;
 $color-background-light: $white;
 $color-selected: $sand;
+$color-visual-row: $blue-light;
+$color-visual-column: $green-light;
+$color-visual-column-nested: $salmon-light;
 
 $border: 1px solid $color-border;
 $border-radius: 5px;
