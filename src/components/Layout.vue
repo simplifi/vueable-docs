@@ -6,7 +6,7 @@ div
 
   h2 Introduction
   p.
-   The building blocks of the grid system are rows and columns. Top level grids provide outer horizontal padding serving as a gutter between content and viewport boundaries. Nested grids by default are positioned flush against their containing elements. Columns render padding between each other and up to 16 columns may be displayed in a single row. Several modifier classes are provided to handle different layout scenarios, as described in the examples below.
+   The building blocks of the grid system are rows and columns. Top level grids provide outer horizontal padding serving as a gutter between content and viewport boundaries. Nested grids by default are positioned flush against their containing elements. Columns render padding between each other and up to 16 columns may be displayed in a single row. Several modifier classes are provided to handle different layout scenarios, as described in the examples below. Use the #[code $grid-columns] variable to set the column count (16 default), the #[code $grid-padding] variable to adjust the padding between columns (#[code 1em] default) and the #[code $grid-max-width] variable to establish the maximum grid width (#[code 78.125rem] / #[code 1250px] default).
 
   h2 Examples
   h3 Basic Layouts
@@ -155,7 +155,7 @@ div
 
   h3 Align Bottom / Middle
   p.
-    By default, columns are vertically-aligned to the top of the row. Bottom or middle alignment can be set. Bottom alignment places all columns at the bottom of the row while middle alignment vertically centers the columns in relation to the tallest column. This technique utilitizes #[code inline-block] display rendering so all whitespace must be removed between column elements. Apply the #[code .vu-l-row-alignbottom] or #[code .vu-l-row-alignmiddle] modifier class to a row.
+    By default, columns are vertically-aligned to the top of the row. Bottom or middle alignment can optionally be set. Bottom alignment places all columns at the bottom of the row while middle alignment vertically centers the columns in relation to the tallest column. This technique utilitizes #[code inline-block] display rendering so all whitespace must be removed between column elements. Apply the #[code .vu-l-row-alignbottom] or #[code .vu-l-row-alignmiddle] modifier class to a row.
   .box.box-neutral
     div(class="vu-l-row vu-l-row-alignbottom gridview")
       div(class="vu-l-col-8")
@@ -273,5 +273,45 @@ div
             .vu-l-col-12 &lt;br&gt; column content &lt;br&gt; column content &lt;br&gt; column content
           &lt;/div&gt;
         &lt;/div&gt;
+
+  h3 Row Mixin
+  p.
+    For semantic grid row creation, include the SASS #[code row] mixin within an element's CSS style rule. By default, a row for a top level grid is generated. Optional values are #[code nest] and #[code expand].
+  h3 Code
+  .box.box-neutral.box-code
+    pre
+      code.
+        .module {
+          @include row;
+        }
+
+        .module-2 {
+          @include row(nest);
+        }
+
+        .module-3 {
+          @include row(expand);
+        }
+
+  h3 Column Mixin
+  p.
+    Apply the SASS #[code column] mixin to a direct descendant of a containing element with the #[code row] mixin applied. Mixin options include #[code $columns] (#[code integer]), #[code $push] (#[code integer]), #[code $pull] (#[code integer]), #[code $collapse] (#[code boolean]), #[code $align] (#[code bottom/middle]) and  #[code $center] (#[code boolean]). #[code $columns] is required while all others are optional.
+  .box.box-neutral.box-code
+    pre
+      code.
+        // Column 4 spaces wide
+        .module-4 {
+          @include column($columns: 4);
+        }
+
+        // 6-column push with padding collapse and bottom alignment
+        .module-5 {
+          @include column($columns: 4, $push: 6, $collapse: true, $align: bottom);
+        }
+
+        // Centered column
+        .module-6 {
+          @include column($columns: 8, $center: true);
+        }
 
 </template>
